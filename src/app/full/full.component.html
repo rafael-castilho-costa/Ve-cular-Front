@@ -1,0 +1,51 @@
+<mat-toolbar color="primary" style="background-color: #093640;">
+  <button mat-icon-button (click)="sidenav.toggle()" class="custom-icon-button">
+    <mat-icon style="color: aliceblue;">menu</mat-icon>
+  </button>
+  <div>
+    <img class="logo-IEAD" src="../../assets/img/logo-devrafa.png">
+  </div>
+
+  <span style="flex: 1 1 0%; box-sizing: border-box;"></span>
+
+  <button  class="custom-icon-button" (click)="logout()">
+    Sair
+  </button>
+
+</mat-toolbar>
+<mat-sidenav-container style="background-color: #081B26;">
+
+  <!-- Sidenav -->
+   <mat-sidenav #sidenav mode="side" [(opened)]="isOpened">
+    <mat-nav-list class="nav-menu" style="justify-content: center;">
+      <a mat-list-item href="/dashboard">
+        <mat-icon matListIcon class="mat-18 custom-icon">home</mat-icon>
+        <span class="name">Dashboard</span>
+      </a>
+      <a class="ajust" mat-list-item href="/veiculos">
+        <mat-icon matListIcon class="mat-18 custom-icon">group</mat-icon>
+        <span class="name">Veículos</span>
+      </a>
+      <a mat-list-item href="/visitantes">
+        <mat-icon matListIcon class="mat-18 custom-icon">person_add</mat-icon>
+        <span class="name">Usuários</span>
+      </a>
+
+
+    </mat-nav-list>
+
+
+  </mat-sidenav>
+
+  <!-- Header and Main Content -->
+  <mat-sidenav-content>
+    <!-- Toolbar -->
+
+
+    <!-- Main Content -->
+    <div style="padding: 16px;">
+    <router-outlet></router-outlet>
+
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

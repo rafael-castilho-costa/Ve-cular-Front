@@ -1,0 +1,23 @@
+
+<section class="login-body">
+  <div class="login-container">
+      <div class="logo-container"></div>
+      <form method="post" class="formLogin" [formGroup]="form">
+          <img src='../../assets/img/logo-devrafa.png' alt="Logo Identicação do Desenvolvedor Rafael Castilho" class="logo">
+          <p>Digite os seus dados de acesso:</p>
+          <label for="email">E-mail</label>
+          <input type="email" placeholder="Digite seu e-mail" autofocus="true" formControlName="email">
+          <small *ngIf="formControls['email']?.touched && formControls['email'].hasError('required')" class="error-mensage">O e-mail é obrigatório.</small>
+          <label for="password">Senha</label>
+          <input type="password" placeholder="Digite sua Senha" formControlName="senha">
+          <small *ngIf="formControls['senha']?.touched && formControls['senha'].hasError('required')" class="error-mensage">A Senha é obrigatória.</small>
+          <button type="button" value="Acessar" class="btn" (click)="login()">Acessar</button>
+          <div class="authcasd">
+            <a href="/">Esqueci minha senha</a>
+          </div>
+
+      </form>
+
+  </div>
+  <div class="copyright">© 2025 Developer Rafael Castilho Da Costa. Todos os direitos reservados.</div>
+</section>

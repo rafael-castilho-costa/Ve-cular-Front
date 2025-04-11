@@ -1,0 +1,95 @@
+.style-tel{
+  background-color: #081B26;
+  padding: 30px;
+
+
+}
+.style-tel h2 {
+  color: #038C8C;
+}
+
+.container-form{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  border: 1px solid #13F2F2;
+  border-radius: 10px;
+  overflow: hidden;
+  gap: 10px;
+
+}
+.container{
+  display: flex;
+  padding: 10px;
+  margin-top: auto;
+}
+
+.container h1{
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+}
+h3 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #FFFFFF;
+}
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 180px;
+}
+
+.form-group label {
+  font-size: 0.9rem;
+  margin-bottom: 0.3rem;
+  color: #ddd;
+}
+
+.form-group input {
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #3e535a;
+  color: #fff;
+  font-size: 0.95rem;
+  transition: outline 0.3s ease;
+}
+
+.form-group input:focus {
+  outline: 2px solid #00bcd4;
+  background-color: #4b6067;
+}
+
+.btn-action-canceled{
+  width: 10%;
+  padding: 10px;
+  background-color: red;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-action-save{
+  width: 10%;
+  padding: 10px;
+  background-color: green;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}

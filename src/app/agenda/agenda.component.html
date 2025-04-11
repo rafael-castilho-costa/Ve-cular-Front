@@ -1,0 +1,31 @@
+<div class="container-page">
+  <!-- Header da Agenda -->
+  <div class="container-header">
+    <mat-icon class="mat-18 custom-icon">view_agenda</mat-icon>
+    <h1>Agenda</h1>
+  </div>
+
+    <div>
+      <button (click)="alterarMes(-1)">ant.</button>
+    </div>
+    <div class="calendario-titulo">
+      {{dataAtual | date : "MMM yyyy"}}
+    </div>
+    <div>
+      <button (click)="alterarMes(+1)">prox.</button>
+    </div>
+    <div class="calendario">
+      <div *ngFor="let dia of diasCalendario" class="dia">
+        <span class="dia-semana">
+          {{ dia.diaSemana }}
+        </span>
+        <span class="data-dia">
+          {{dia.data| date : 'dd'}}
+        </span>
+
+
+      </div>
+
+  </div>
+
+</div>

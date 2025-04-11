@@ -1,0 +1,59 @@
+.container-page {
+  width: 100%;
+  padding: 32px;
+  background-color: #fff;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.container-header {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 5px 20px;
+  border: 2px solid #255291;
+  border-radius: 8px;
+  overflow: hidden;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.calendario {
+  display: grid;
+  margin-top: 10px;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+  width: 90%;
+}
+
+.dia {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-content: center;
+}
+
+.dia-semana {
+  font-size: 11px;
+  font-weight: bold;
+  color: #333;
+  align-self: center;
+  padding: 15px;
+}
+
+.data-dia {
+  font-size: 24px;
+  color: #777;
+  align-self: center;
+  margin-bottom: 10px;
+}
+
+.calendario div {
+  border: 1px solid;
+}

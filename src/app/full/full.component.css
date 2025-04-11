@@ -1,0 +1,105 @@
+.mat-sidenav-container {
+  height: 100vh;
+}
+.mat-toolbal {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  padding: 0 16px;
+  flex-direction: row;
+  box-sizing: border-box;
+}
+button[mat-icon-button] {
+  color: white;
+  padding: 0;
+  min-width: 0;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  line-height: 25px;
+  border-radius: 50%;
+}
+
+.mat-menu {
+  min-width: 200px;
+}
+.mat-icon  {
+ color: #484c4c;
+}
+
+.custom-icon {
+  margin-top: 10px;
+  align-items: center;
+}
+
+.custom-icon-button {
+  color: white;
+  border: none;
+  background-color: transparent !important;
+  font-weight: bold;
+  font-size: 20px;
+}
+.custom-icon-button:hover {
+  color: black;
+
+}
+
+
+.mat-nav-list mat-icon {
+  margin-right: 8px;
+}
+
+.mat-sidenav {
+  width: 250px;
+  background: #093640;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 80%;
+}
+
+.nav-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.nav-menu a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.mat-list-item:hover {
+  background: #e0e0e0;
+}
+
+.mat-icon-button {
+  color: #fff;
+}
+
+.perfil-layout-button {
+  color: white;
+  background-color: transparent !important;
+  border: none;
+}
+
+.logo-IEAD {
+  max-width: 100%;
+  height: auto;
+  width: 90px;
+  margin-top: 13px;
+}
+
+.name {
+  margin: 20px;
+  color: #FFFFFF;
+  font-weight: bold;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.ajust {
+  align-items: center;
+}
