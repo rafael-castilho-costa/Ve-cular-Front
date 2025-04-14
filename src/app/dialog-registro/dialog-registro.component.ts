@@ -1,3 +1,4 @@
+import { join } from 'node:path';
 import { VeiculoService } from './../veiculos/service/veiculo.service';
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
@@ -28,16 +29,18 @@ export class DialogRegistroComponent {
         modelo: ['', Validators.required],
         placa: ['', Validators.required],
         cpf: ['', Validators.required],
-        nome: ['', Validators.required],
+        proprietario: ['', Validators.required],
       });
     }
 
   fechar(): void {
+
     this.dialogRef.close();
     console.log('Tentando Salvar');
   }
 
   salvar(): void {
+
     if (this.veiculoForm.valid){
       const dados = this.veiculoForm.value;
       console.log('Enviando para o backend:', dados);
@@ -49,6 +52,19 @@ export class DialogRegistroComponent {
         },
         error:(err) => {
           console.error('Erro ao Cadastrar Veículo:', err);
+
+          if (err.status === 400 && err.error?.errors) {
+            err.error.errors.forEach((erro: any) => {
+              const campo = erro.field;
+              const mensagem = erro.defaultMenssage;
+
+              if (this.veiculoForm.controls[campo]) {
+                this.veiculoForm.controls[campo].setErrors({serverError: mensagem});
+              }
+            });
+          } else {
+            alert('Erro inesperado. Tente novamente mais tarde');
+          }
         }
       });
 

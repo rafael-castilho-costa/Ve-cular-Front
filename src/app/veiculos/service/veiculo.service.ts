@@ -20,7 +20,14 @@ export class VeiculoService {
   constructor( private http: HttpClient) {}
 
   cadastrarVeiculo(dados: any): Observable<any> {
-    return this.http.post(this.apiUrl,dados);
+    return this.http.post(this.apiUrl,dados, {
+      withCredentials: false
+    });
+
+  }
+
+  getVeiculos(): Observable<any[]> {
+    return this.http.get<any[]>(this.apiUrl);
   }
 
 }
